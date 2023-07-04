@@ -268,6 +268,12 @@ public class Transportation implements
         networkType = RouteNetwork.US_STATE;
       } else if (network != null && network.startsWith("CA:transcanada")) {
         networkType = RouteNetwork.CA_TRANSCANADA;
+      } else if (network != null && network.startsWith("BAB")) {
+        networkType = RouteNetwork.DE_BAB;
+      } else if (network != null && network.startsWith("NL:A")) {
+        networkType = RouteNetwork.NL_A;
+      } else if (network != null && network.startsWith("NL:N")) {
+        networkType = RouteNetwork.NL_N;
       }
 
       int rank = switch (coalesce(network, "")) {
@@ -551,7 +557,11 @@ public class Transportation implements
     US_STATE("us-state"),
     CA_TRANSCANADA("ca-transcanada"),
     GB_MOTORWAY("gb-motorway"),
-    GB_TRUNK("gb-trunk");
+    GB_TRUNK("gb-trunk"),
+    DE_BAB("de-bab"),
+    DE_B("de-b"),
+    NL_A("nl-a"),
+    NL_N("nl-n");
 
     final String name;
 

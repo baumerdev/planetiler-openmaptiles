@@ -37,7 +37,10 @@ See https://github.com/openmaptiles/openmaptiles/blob/master/LICENSE.md for deta
 
 package org.openmaptiles.generated;
 
-import static com.onthegomap.planetiler.expression.Expression.*;
+import static com.onthegomap.planetiler.expression.Expression.FALSE;
+import static com.onthegomap.planetiler.expression.Expression.and;
+import static com.onthegomap.planetiler.expression.Expression.matchAny;
+import static com.onthegomap.planetiler.expression.Expression.or;
 
 import com.onthegomap.planetiler.config.PlanetilerConfig;
 import com.onthegomap.planetiler.expression.MultiExpression;
@@ -1429,9 +1432,13 @@ public class OpenMapTilesSchema {
       public static final String NETWORK_CA_TRANSCANADA = "ca-transcanada";
       public static final String NETWORK_GB_MOTORWAY = "gb-motorway";
       public static final String NETWORK_GB_TRUNK = "gb-trunk";
+      public static final String NETWORK_DE_BAB = "de-bab";
+      public static final String NETWORK_DE_B = "de-b";
+      public static final String NETWORK_NL_A = "nl-a";
+      public static final String NETWORK_NL_N = "nl-n";
       public static final String NETWORK_ROAD = "road";
       public static final Set<String> NETWORK_VALUES =
-        Set.of("us-interstate", "us-highway", "us-state", "ca-transcanada", "gb-motorway", "gb-trunk", "road");
+        Set.of("us-interstate", "us-highway", "us-state", "ca-transcanada", "gb-motorway", "gb-trunk", "de-bab", "de-b", "nl-a", "nl-n", "road");
       public static final String CLASS_MOTORWAY = "motorway";
       public static final String CLASS_TRUNK = "trunk";
       public static final String CLASS_PRIMARY = "primary";
